@@ -36,4 +36,6 @@ addGlobalStyle('code.hljs { color: #FFFFFF !important}');
 addGlobalStyle('.container.mainContainer code{ color: #FFFFFF !important}');
 addGlobalStyle('pre { text-shadow: none !important}');
 addGlobalStyle(' code[class*=language-] { text-shadow: none !important } ');
-addGlobalStyle('ul.toc-headings li a code { font-size: 111%; }');
+addGlobalStyle('ul.toc-headings li a code { font-size: 15px; }');
+addGlobalStyle('a.navItem { color: #FFFFFF; text-shadow: none; font-size: 18px !important; }');
+addGlobalStyle(':visited, :visited * { color: #FFFFFF !important; }');
