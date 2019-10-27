@@ -1,0 +1,39 @@
+// ==UserScript==
+// @name         _ remove style code for any site
+// @version      1.0
+// @require      http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
+// @author       You
+// @match        https://webpack.js.org/*
+// @match        https://reactjs.org/*
+// @match        https://facebook.github.io/react-native/*
+// @match        http://airbnb.io/*
+// @match        http://www.slimframework.com/*
+// @match        https://packagecontrol.io/*
+// @match        https://mdbootstrap.com/*
+// @match        https://express-validator.github.io/*
+// @grant        GM_addStyle
+// ==/UserScript==
+
+function addGlobalStyle(css) {
+    var head, style;
+    head = document.getElementsByTagName('head')[0];
+    console.log( head );
+    if (!head) { return; }
+    style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = css;
+    head.appendChild(style);
+}
+
+addGlobalStyle('code { text-shadow: none !important; }');
+addGlobalStyle('.gitter { display: none !important; }');
+addGlobalStyle('a { text-shadow: none !important; color: #FFFF00 !important}');
+addGlobalStyle('.container.mainContainer { background-color: #4D4D4D !important}');
+addGlobalStyle('p { color: #FFFFFF !important}');
+addGlobalStyle('.postHeaderTitle { color: #FFFFFF !important}');
+addGlobalStyle('.container.mainContainer h1, .container.mainContainer h2, .container.mainContainer h3, .container.mainContainer h4, .container.mainContainer h5 { color: #FFFFFF !important}');
+addGlobalStyle('code.hljs { color: #FFFFFF !important}');
+addGlobalStyle('.container.mainContainer code{ color: #FFFFFF !important}');
+addGlobalStyle('pre { text-shadow: none !important}');
+addGlobalStyle(' code[class*=language-] { text-shadow: none !important } ');
+addGlobalStyle('ul.toc-headings li a code { font-size: 111%; }');
